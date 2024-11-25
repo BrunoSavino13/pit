@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#RodaPeInicial {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 17%;
+    padding-right: 8%;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.705);
+    fill: rgba(0, 0, 0, 0.705);
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 100;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#RodaPeInicial div:hover,
+#RodaPeInicial span:hover {
+    transition: 0.6s;
+    transform: scale(1.1);
+}
+
+.hover14 figure {
+    position: relative;
+}
+.hover14 figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 70%;
+    height: 80px;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+    animation: shine .75s;
+}
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+a {
+    color: black;
+}
+
+/* Grid para exibição dinâmica dos produtos */
+#GRIDProd {
+    padding-top: 4%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 14%;
+    margin-left: 14%;
+    flex-wrap: wrap; /* Adicionado para permitir que os produtos fluam em várias linhas */
+}
+
+/* Classe para os produtos dinâmicos */
+.produto {
+    width: 400px;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 29%;
+    font-weight: 100;
+    font-size: 25px;
+    transition: background-image 0.6s;
+}
+
+/* Hover para os produtos */
+.produto:hover {
+    background-image: url('../IMG/hover-image.jpg'); /* Exemplo de imagem ao passar o mouse */
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: #050a30;
+    color: #fff;
+}
+
+body.dark-mode #RodaPeInicial {
+    background-color: #050a30;
+    color: rgba(255, 255, 255, 0.705);
+    fill: rgba(255, 255, 255, 0.705);
+}
+
+body.dark-mode .produto {
+    background-color: #050a30;
+    color: #ddd;
+}
+
+body.dark-mode .produto:hover {
+    color: #fff;
+}
+
+body.dark-mode a {
+    color: white;
+}

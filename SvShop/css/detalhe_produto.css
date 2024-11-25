@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    gap: 40px; /* Aumenta o espaçamento horizontal entre as seções */
+}
+
+.image-gallery {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre as imagens da galeria */
+}
+
+.image-gallery img {
+    width: 100%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.image-gallery img:hover {
+    border: 2px solid #fff;
+}
+
+.main-image {
+    width: 35%; /* Reduz um pouco para dar mais espaço aos textos */
+    text-align: center;
+}
+
+.main-image img {
+    width: 100%;
+    max-height: 400px; /* Limita a altura para um visual mais consistente */
+    object-fit: contain; /* Ajusta a imagem para caber sem distorção */
+}
+
+.product-details {
+    width: 45%; /* Aumenta a largura para acomodar melhor o texto */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+.product-details h1 {
+    font-size: 28px;
+    color: #000;
+}
+
+.product-details .description {
+    font-size: 18px;
+    color: #666;
+}
+
+.product-details .price {
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+}
+
+.product-details .stock {
+    font-size: 16px;
+    color: #333;
+}
+
+.sizes {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os botões de tamanho */
+}
+
+.sizes span {
+    font-size: 16px;
+}
+
+.sizes button {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.sizes button:hover {
+    background-color: black;
+    border-color: white;
+}
+
+.buy-now {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.buy-now:hover {
+    background-color: #444;
+}
+
+.info {
+    font-size: 14px;
+}
+
+/* Botões de tamanho padrão */
+.sizes button {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Efeito suave */
+}
+
+/* Botão ao passar o mouse */
+.sizes button:hover {
+    background-color: black;
+    border-color: white;
+}
+
+/* Estilo para o botão selecionado */
+.sizes button.selected {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-weight: bold;
+}

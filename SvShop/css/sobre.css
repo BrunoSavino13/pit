@@ -1,0 +1,19 @@
+.imgfundo{
+    z-index: -1;
+}
+
+.sobrenos{
+    color: blueviolet;
+}
+#QuadPreto{
+    display: grid;
+    padding-top: 4%;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+}
+
+#QuadPreto img{
+    filter: invert(100%);
+}
